@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ✅ HEADER (branding) */
+.header {
+  width: 100%;
+  padding: 20px 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centers all child items horizontally */
+  justify-content: center;   
+  width: 100%;
+  max-width: 550px;         /* 🚀 Limits row width so elements look clean and balanced */
+  margin: 0 auto;           /* 🚀 FORCES the entire layout block to sit in the absolute center */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+
+/* ✅ LOGO now aligned with form */
+.logo {
+  position: absolute;    
+  top: 24px;            
+  left: 32px;           
+  margin: 0;
+  
+  display: flex;         /* Horizontal axis row layout */
+  align-items: center;   /* Perfectly targets the middle of the icon */
+  gap: 14px;             /* Space between image icon and the text block */
+  z-index: 10;
+}
+
+/* ✅ Layout */
+/* ✅ Layout (Fixes the viewport centering) */
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;          /* 🚀 Forces the container to take up full screen width */
+  min-height: 100vh;     /* 🚀 Forces container to fill full screen height */
+  box-sizing: border-box;
+}
+
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* ✅ TRUE centering */
+  align-items: center;
+}
+
+/* ✅ Top Row */
+.top-row {
+  display: flex;
+  width: 100%;              /* Forces it to stretch to the 550px max-width boundary */
+  gap: 15px;                /* Controls spacing gap between Model and API boxes */
+  margin-bottom: 5px;
+}
+
+.field {
+  flex: 1;                  /* Makes Model and API Key take up exactly 50% width each */
+  display: flex;
+  flex-direction: column;
+  text-align: left;         /* Keeps label text left-aligned directly above its input */
+}
+
+/* Label */
+.field label {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+/* ✅ Modern Inputs */
+input,
+select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* ✅ Fade effect */
+.faded {
+  opacity: 0.35;
+  transform: translateY(-6px) scale(0.98);
+  filter: blur(0.6px);
+}
+
+/* ✅ URL section FIX */
+.url-section {
+  width: 100%;              /* Matches the 550px row length exactly */
+  margin-top: 10px;
+}
+
+.center-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* ✅ true horizontal centering */
+}
+
+
+/* ✅ Input box stays centered */
+.input-box input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.input-box {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+}
+
+
+.input-box input {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;       /* Matches top row border-radius */
+}
+
+.input-box button {
+  white-space: nowrap; 
+  padding: 12px 24px;
+  border-radius: 12px;       /* Matches input field corners */
+  cursor: pointer;
+  height: 46px;              /* Keeps button perfectly leveled with input text box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  display: block;
+  height: 38px;          /* Slightly larger to balance two lines of text */
+  width: auto;
+  object-fit: contain;   
+}
+
+.logo span {
+  font-size: 12px;       /* Smaller subtitle text scale */
+  color: #9ca3af;
+  font-weight: 400;
+  margin-top: 4px;       /* Subtle comfort separation below "WrapUp" */
+  margin-left: 0;        /* Resetting previous layout gaps */
+}
+
+/* ✅ 🚀 FORCES the text lines to pile up vertically */
+.logo-text-group {
+  display: flex;
+  flex-direction: column; /* Vertically stacks title and tagline */
+  align-items: flex-start; /* Lines them up squarely on the left edge */
+  font-size: 24px;       /* This sets the font size for "WrapUp" */
+  font-weight: 600;
+  line-height: 1.1;      /* Keeps the title and subtitle tightly grouped */
+  color: #ffffff;
+}
+
+/* ✅ Thumbnail wrapper ensures new line */
+.thumb-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* ✅ center image */
+  margin-top: 20px;
+}
+
+/* ✅ Thumbnail size */
+.thumb {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 14px;
+}
+
+/* Focus state */
+.url-section.focus {
+  transform: translateY(-8px);
+}
+
+
+/* Hover glow */
+.input-box:hover {
+  border-color: #6366f1;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+/* ✅ Valid URL state */
+/* Target the input inside the valid container */
+.input-box.valid input {
+  border-color: #22c55e !important;
+  background-color: rgba(34, 197, 94, 0.05); /* Soft transparent green background */
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.2);
+}
+
+/* ✅ Modern Button */
+button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4);
+}
+
+/* ✅ Notes */
+.notes {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 650px;
+  background: rgba(17, 24, 39, 0.6);
+  padding: 20px;
+  border-radius: 14px;
+  line-height: 1.6;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ✅ Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
