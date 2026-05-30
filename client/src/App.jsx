@@ -74,7 +74,7 @@ export default function App() {
       const res = await getNotes(url, model);
 
       const link = document.createElement("a");
-      link.href = `http://localhost:5000${res.data.file}`;
+      link.href = `https://wrapup-server-dslb.onrender.com${res.data.file}`;
       link.download = true;
       link.click();
 
