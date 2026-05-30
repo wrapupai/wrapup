@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://wrapup-server-dslb.onrender.com/api",
 });
 
 export const getNotes = (url, model) =>
